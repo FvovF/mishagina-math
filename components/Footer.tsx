@@ -1,12 +1,12 @@
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-gray-900 text-white py-8 sm:py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-6 sm:mb-8">
           {/* About */}
           <div>
-            <h3 className="text-xl font-bold mb-4">О преподавателе</h3>
-            <p className="text-gray-400 leading-relaxed">
+            <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">О преподавателе</h3>
+            <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
               Профессиональная подготовка к ОГЭ по математике с 10-летним опытом работы.
               Индивидуальный подход к каждому ученику.
             </p>
@@ -14,20 +14,20 @@ export default function Footer() {
 
           {/* Quick links */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Быстрые ссылки</h3>
+            <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Быстрые ссылки</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#about" className="text-gray-400 hover:text-white transition-colors duration-300">
+                <a href="#about" className="text-sm sm:text-base text-gray-400 hover:text-white transition-colors duration-300">
                   О преподавателе
                 </a>
               </li>
               <li>
-                <a href="#pricing" className="text-gray-400 hover:text-white transition-colors duration-300">
+                <a href="#pricing" className="text-sm sm:text-base text-gray-400 hover:text-white transition-colors duration-300">
                   Стоимость
                 </a>
               </li>
               <li>
-                <a href="#contacts" className="text-gray-400 hover:text-white transition-colors duration-300">
+                <a href="#contacts" className="text-sm sm:text-base text-gray-400 hover:text-white transition-colors duration-300">
                   Контакты
                 </a>
               </li>
@@ -35,28 +35,28 @@ export default function Footer() {
           </div>
 
           {/* Contacts */}
-          <div>
-            <h3 className="text-xl font-bold mb-4">Связаться</h3>
-            <ul className="space-y-3">
+          <div className="sm:col-span-2 lg:col-span-1">
+            <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Связаться</h3>
+            <ul className="space-y-2 sm:space-y-3">
               <li>
                 <a
                   href="https://t.me/OlgaMish_teacher"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center space-x-2"
+                  className="text-sm sm:text-base text-gray-400 hover:text-white transition-colors duration-300 flex items-center space-x-2"
                 >
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z" />
                   </svg>
-                  <span>@OlgaMish_teacher</span>
+                  <span className="break-all">@OlgaMish_teacher</span>
                 </a>
               </li>
               <li>
                 <a
                   href="tel:+79991234567"
-                  className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center space-x-2"
+                  className="text-sm sm:text-base text-gray-400 hover:text-white transition-colors duration-300 flex items-center space-x-2"
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                   <span>+7 (999) 123-45-67</span>
@@ -67,9 +67,9 @@ export default function Footer() {
                   href="https://vk.com/olga_math_teacher"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center space-x-2"
+                  className="text-sm sm:text-base text-gray-400 hover:text-white transition-colors duration-300 flex items-center space-x-2"
                 >
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14c5.6 0 6.93-1.33 6.93-6.93V8.93C22 3.33 20.67 2 15.07 2zm3.65 14.44s-.8.87-2.24.62c0 0-2.52-.14-5.1-3.35-2.02-2.54-3.57-2.31-3.57-2.31-.7.04-.67-.54-.67-.54-.02-.68.76-.72.76-.72 1.5-.16 2.28 1.61 2.28 1.61 2.06 3.6 3.47 2.57 4.16 2.3.19-.67.86-1.9.86-1.9.82-1.47-.13-3.36-.13-3.36-1.5-3.3-5.56-2.42-5.56-2.42-.79.15-1.61.69-1.61.69-.7.55-.47 1.12-.47 1.12.2.47.96.39.96.39.74-.09.85.41.85.41.41 1.55 1.57 2.66 1.57 2.66 2.17 2.36 3.85 2.14 3.85 2.14.86-.09.86-.73.86-.73 0-.74-.59-1.41-.59-1.41-.84-1.3-2.48-1.25-2.48-1.25-1.94.09-2.93 1.69-2.93 1.69-.65 1.08-.34 2.04-.34 2.04.35 1.14 1.62 1.47 1.62 1.47 1.5.35 2.82-.96 2.82-.96.97-.91.89-2.15.89-2.15-.04-1.19-1.01-1.89-1.01-1.89-.87-.61-2.06-.5-2.06-.5-1.06.08-1.77.91-1.77.91-.47.55-.42 1.2-.42 1.2.06.75.75 1.12.75 1.12.82.39 1.67-.13 1.67-.13.65-.38.77-1.12.77-1.12.11-.87-.61-1.52-.61-1.52-.75-.67-1.9-.49-1.9-.49-1.02.15-1.63 1.07-1.63 1.07-.42.66-.25 1.39-.25 1.39.23.87 1.13 1.23 1.13 1.23.96.35 1.92-.26 1.92-.26.69-.43.74-1.24.74-1.24 0-.95-.85-1.5-.85-1.5-.9-.53-2.01-.26-2.01-.26-.89.22-1.36 1.03-1.36 1.03-.3.54-.16 1.15-.16 1.15.21.73.94.98.94.98.82.23 1.57-.33 1.57-.33.54-.39.53-1.06.53-1.06-.03-.8-.77-1.22-.77-1.22-.79-.41-1.69-.1-1.69-.1-.73.25-1.07.95-1.07.95-.22.47-.02.98-.02.98.28.62.98.73.98.73.75.08 1.26-.48 1.26-.48.38-.41.28-.94.28-.94-.15-.64-.76-.82-.76-.82-.67-.18-1.24.26-1.24.26-.44.34-.45.89-.45.89.02.61.53.83.53.83.58.22 1.08-.17 1.08-.17.35-.29.23-.77.23-.77-.18-.54-.67-.6-.67-.6-.52-.04-.8.38-.8.38-.19.31-.03.68-.03.68.22.43.7.42.7.42.47-.02.67-.42.67-.42.14-.31-.07-.63-.07-.63-.28-.35-.72-.27-.72-.27-.38.06-.49.39-.49.39-.07.26.11.49.11.49.23.27.57.15.57.15.28-.11.27-.42.27-.42-.04-.28-.32-.33-.32-.33-.26-.02-.35.24-.35.24-.04.19.13.31.13.31.19.13.37-.01.37-.01.15-.12.09-.31.09-.31-.09-.18-.3-.15-.3-.15-.18.03-.19.2-.19.2.01.13.16.17.16.17.15.03.2-.11.2-.11.03-.13-.11-.18-.11-.18-.13-.03-.15.11-.15.11.01.09.11.11.11.11.09.01.11-.08.11-.08 0-.08-.09-.09-.09-.09-.08 0-.09.08-.09.08v.06s.07.05.07.05h.06s.05-.05.05-.05-.06-.06-.06-.06h-.05s-.04.04-.04.04v.04h.04v-.03h.03v.02h-.03v.03h-.04v-.05z" />
                   </svg>
                   <span>ВКонтакте</span>
@@ -80,8 +80,8 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-gray-800 pt-8 text-center">
-          <p className="text-gray-400">
+        <div className="border-t border-gray-800 pt-6 sm:pt-8 text-center">
+          <p className="text-xs sm:text-sm text-gray-400">
             &copy; {new Date().getFullYear()} Мишагина Ольга Юрьевна — Репетитор по математике ОГЭ
           </p>
         </div>

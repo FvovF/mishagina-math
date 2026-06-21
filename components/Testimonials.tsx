@@ -67,36 +67,36 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 bg-gradient-to-br from-blue-50 to-white">
+    <section ref={sectionRef} className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-blue-50 to-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           {/* Section header */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4">
               Отзывы учеников и родителей
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto px-4">
               Что говорят о занятиях те, кто уже достиг своих целей
             </p>
-            <div className="w-24 h-1 bg-blue-600 mx-auto rounded-full mt-6"></div>
+            <div className="w-20 sm:w-24 h-1 bg-blue-600 mx-auto rounded-full mt-4 sm:mt-6"></div>
           </div>
 
           {/* Testimonials grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-7xl mx-auto">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className={`bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 ${
+                className={`bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 ${
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 {/* Rating stars */}
-                <div className="flex space-x-1 mb-4">
+                <div className="flex space-x-1 mb-3 sm:mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <svg
                       key={i}
-                      className="w-5 h-5 text-yellow-400 fill-current"
+                      className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 fill-current"
                       viewBox="0 0 20 20"
                     >
                       <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
@@ -105,24 +105,24 @@ export default function Testimonials() {
                 </div>
 
                 {/* Testimonial text */}
-                <p className="text-gray-700 leading-relaxed mb-6 text-base">
+                <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-4 sm:mb-6">
                   &quot;{testimonial.text}&quot;
                 </p>
 
                 {/* Author info */}
-                <div className="border-t border-gray-200 pt-4">
-                  <p className="font-semibold text-gray-900">{testimonial.name}</p>
-                  <p className="text-sm text-gray-600">{testimonial.role}</p>
+                <div className="border-t border-gray-200 pt-3 sm:pt-4">
+                  <p className="font-semibold text-gray-900 text-sm sm:text-base">{testimonial.name}</p>
+                  <p className="text-xs sm:text-sm text-gray-600">{testimonial.role}</p>
                 </div>
               </div>
             ))}
           </div>
 
           {/* Call to action */}
-          <div className="text-center mt-16">
+          <div className="text-center mt-12 sm:mt-16">
             <a
               href="#contacts"
-              className="inline-block px-8 py-4 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/50 hover:-translate-y-1"
+              className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/50 hover:-translate-y-1 text-sm sm:text-base"
             >
               Стать следующим успешным учеником
             </a>

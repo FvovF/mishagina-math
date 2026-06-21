@@ -59,56 +59,56 @@ export default function Pricing() {
   }, []);
 
   return (
-    <section id="pricing" ref={sectionRef} className="py-24 bg-white">
+    <section id="pricing" ref={sectionRef} className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           {/* Section header */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4">
               Стоимость занятий
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto px-4">
               Выберите формат, который подходит именно вам
             </p>
-            <div className="w-24 h-1 bg-blue-600 mx-auto rounded-full mt-6"></div>
+            <div className="w-20 sm:w-24 h-1 bg-blue-600 mx-auto rounded-full mt-4 sm:mt-6"></div>
           </div>
 
           {/* Pricing cards */}
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">
             {pricingOptions.map((option, index) => (
               <div
                 key={index}
                 className={`relative bg-gradient-to-br ${
                   option.popular
-                    ? 'from-blue-50 to-blue-100 border-4 border-blue-600'
+                    ? 'from-blue-50 to-blue-100 border-2 sm:border-4 border-blue-600'
                     : 'from-gray-50 to-white border-2 border-gray-200'
-                } rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 ${
+                } rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 ${
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
                 style={{ transitionDelay: `${index * 200}ms` }}
               >
                 {option.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg">
+                  <div className="absolute -top-3 sm:-top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-blue-600 text-white px-4 sm:px-6 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold shadow-lg">
                       Популярный выбор
                     </span>
                   </div>
                 )}
 
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{option.title}</h3>
-                  <div className="flex items-baseline justify-center mb-4">
-                    <span className="text-5xl font-bold text-blue-600">{option.price}</span>
-                    <span className="text-2xl text-gray-600 ml-2">₽</span>
+                <div className="text-center mb-6 sm:mb-8">
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">{option.title}</h3>
+                  <div className="flex items-baseline justify-center mb-3 sm:mb-4">
+                    <span className="text-4xl sm:text-5xl font-bold text-blue-600">{option.price}</span>
+                    <span className="text-xl sm:text-2xl text-gray-600 ml-2">₽</span>
                   </div>
-                  <p className="text-gray-600 leading-relaxed">{option.description}</p>
+                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed px-2">{option.description}</p>
                 </div>
 
-                <div className="space-y-4 mb-8">
+                <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
                   {option.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-start space-x-3">
+                    <div key={featureIndex} className="flex items-start space-x-2 sm:space-x-3">
                       <svg
-                        className="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5"
+                        className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600 flex-shrink-0 mt-0.5"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -120,14 +120,14 @@ export default function Pricing() {
                           d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                         />
                       </svg>
-                      <span className="text-gray-700">{feature}</span>
+                      <span className="text-sm sm:text-base text-gray-700">{feature}</span>
                     </div>
                   ))}
                 </div>
 
                 <a
                   href="#contacts"
-                  className={`block w-full text-center py-4 rounded-xl font-semibold transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${
+                  className={`block w-full text-center py-3 sm:py-4 rounded-xl font-semibold transition-all duration-300 hover:shadow-xl hover:-translate-y-1 text-sm sm:text-base ${
                     option.popular
                       ? 'bg-blue-600 text-white hover:bg-blue-700'
                       : 'bg-white text-blue-600 border-2 border-blue-600 hover:bg-blue-50'
@@ -140,12 +140,12 @@ export default function Pricing() {
           </div>
 
           {/* Additional info */}
-          <div className="mt-16 text-center max-w-3xl mx-auto">
-            <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+          <div className="mt-12 sm:mt-16 text-center max-w-3xl mx-auto px-4">
+            <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl sm:rounded-2xl p-6 sm:p-8">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
                 Первое занятие — бесплатно!
               </h3>
-              <p className="text-gray-700 text-lg leading-relaxed">
+              <p className="text-sm sm:text-base lg:text-lg text-gray-700 leading-relaxed">
                 На первом занятии мы познакомимся, определим ваш текущий уровень знаний,
                 обсудим цели и составим индивидуальный план подготовки к ОГЭ
               </p>

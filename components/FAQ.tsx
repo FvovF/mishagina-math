@@ -60,39 +60,39 @@ export default function FAQ() {
   };
 
   return (
-    <section ref={sectionRef} className="py-24 bg-white">
+    <section ref={sectionRef} className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           {/* Section header */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4">
               Частые вопросы
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto px-4">
               Ответы на самые популярные вопросы о занятиях
             </p>
-            <div className="w-24 h-1 bg-blue-600 mx-auto rounded-full mt-6"></div>
+            <div className="w-20 sm:w-24 h-1 bg-blue-600 mx-auto rounded-full mt-4 sm:mt-6"></div>
           </div>
 
           {/* FAQ Accordion */}
-          <div className="max-w-3xl mx-auto space-y-4">
+          <div className="max-w-3xl mx-auto space-y-3 sm:space-y-4">
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className={`bg-gradient-to-br from-blue-50 to-white rounded-2xl shadow-lg overflow-hidden transition-all duration-500 ${
+                className={`bg-gradient-to-br from-blue-50 to-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden transition-all duration-500 ${
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <button
                   onClick={() => toggleAccordion(index)}
-                  className="w-full text-left p-6 flex items-center justify-between hover:bg-blue-100/50 transition-colors duration-300"
+                  className="w-full text-left p-4 sm:p-6 flex items-center justify-between hover:bg-blue-100/50 transition-colors duration-300"
                 >
-                  <span className="text-lg font-semibold text-gray-900 pr-8">
+                  <span className="text-base sm:text-lg font-semibold text-gray-900 pr-4 sm:pr-8">
                     {faq.question}
                   </span>
                   <svg
-                    className={`w-6 h-6 text-blue-600 flex-shrink-0 transition-transform duration-300 ${
+                    className={`w-5 h-5 sm:w-6 sm:h-6 text-blue-600 flex-shrink-0 transition-transform duration-300 ${
                       openIndex === index ? 'transform rotate-180' : ''
                     }`}
                     fill="none"
@@ -112,7 +112,7 @@ export default function FAQ() {
                     openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                   }`}
                 >
-                  <div className="p-6 pt-0 text-gray-700 leading-relaxed">
+                  <div className="p-4 sm:p-6 pt-0 text-sm sm:text-base text-gray-700 leading-relaxed">
                     {faq.answer}
                   </div>
                 </div>
@@ -121,13 +121,13 @@ export default function FAQ() {
           </div>
 
           {/* Additional CTA */}
-          <div className="text-center mt-16">
-            <p className="text-gray-600 mb-6 text-lg">
+          <div className="text-center mt-12 sm:mt-16">
+            <p className="text-gray-600 mb-4 sm:mb-6 text-base sm:text-lg px-4">
               Остались вопросы? Свяжитесь со мной удобным способом
             </p>
             <a
               href="#contacts"
-              className="inline-block px-8 py-4 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/50 hover:-translate-y-1"
+              className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/50 hover:-translate-y-1 text-sm sm:text-base"
             >
               Задать вопрос
             </a>
