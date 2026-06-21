@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Сайт репетитора по математике ОГЭ
 
-## Getting Started
+Современный премиальный лендинг для репетитора по математике Мишагиной Ольги Юрьевны.
 
-First, run the development server:
+## Технологии
+
+- Next.js 15
+- TypeScript
+- Tailwind CSS
+- App Router
+- Адаптивная верстка
+- SEO-оптимизация
+
+## Установка и запуск
 
 ```bash
+# Установить зависимости
+npm install
+
+# Запустить dev сервер
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Сайт откроется на [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Сборка для продакшена
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Деплой на Vercel
 
-To learn more about Next.js, take a look at the following resources:
+1. Создайте аккаунт на [Vercel](https://vercel.com)
+2. Установите Vercel CLI:
+```bash
+npm install -g vercel
+```
+3. Задеплойте проект:
+```bash
+vercel
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Или загрузите проект через веб-интерфейс Vercel.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Добавление фото преподавателя
 
-## Deploy on Vercel
+Разместите фото преподавателя в папку `public/` с именем `teacher.png` или `teacher.jpg`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Затем обновите компонент `components/Hero.tsx`, заменив placeholder на реальное изображение:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```tsx
+<Image
+  src="/teacher.png"
+  alt="Мишагина Ольга Юрьевна"
+  fill
+  className="object-cover"
+  priority
+/>
+```
+
+## Структура проекта
+
+```
+m/
+├── app/
+│   ├── layout.tsx       # Основной layout с SEO
+│   ├── page.tsx         # Главная страница
+│   └── globals.css      # Глобальные стили и анимации
+├── components/
+│   ├── Hero.tsx         # Первый экран
+│   ├── About.tsx        # О преподавателе
+│   ├── Results.tsx      # Результаты учеников
+│   ├── Pricing.tsx      # Цены
+│   ├── Testimonials.tsx # Отзывы
+│   ├── FAQ.tsx          # Частые вопросы
+│   ├── Contacts.tsx     # Контакты
+│   └── Footer.tsx       # Футер
+└── public/              # Статические файлы
+```
+
+## Контакты преподавателя
+
+- Telegram: [@OlgaMish_teacher](https://t.me/OlgaMish_teacher)
+- Телефон: +7 (999) 123-45-67
+- ВКонтакте: [olga_math_teacher](https://vk.com/olga_math_teacher)
+
